@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">대한민국만세</p>
+    <p id="p2">우리나라만세</p>
+    <p id="p3">Republic of Korea</p>
+  </body>
+  <script>
+    //함수(method)를 선언하기
+    //click_func이라는 함수를 선언한다.
+    //이 함수는 {...} 코드를 실행한다.
+    let click_p1 = function (ev) {
+      alert("안녕하세요");
+    };
+    //옛날 방식의 함수선언
+    function click_p2(ev) {
+      alert("p2를 클릭했군요");
+    }
+
+    //보고있는 화면에서 p#p1 tag를 클릭하면 함수를 실행하라
+    document // 현재문서에 있는
+      .querySelector("p#p1") // id가 p1인 p tag를 선택하여
+      .addEventListener("click", click_p1); // click event 핸들러를 설정(추가)하라
+
+    document.querySelector("p#p2").addEventListener("click", click_p2);
+
+    /*
+    동기식(Sync) 코드 진행(실행) 방식
+
+    단순한 console프로젝트에서는
+    사용자의 입력에 따른 기능을 수행할 때 
+    입력이 제대로(코드에서 원하는대로) 될 떄까지
+    마냥 기다리고 있다가 또는 입력한 값을 검증하는 절차를 수행하다가
+    입력한 값대로 기능(코드)를 수행하는 방법을 사용한다.
+    이러한 방식의 코드는 사용자의 입력 부분에서
+    멈추거나 무한반복되는 코드가 작성된다
+    사용자는 다른 기능을 임의로 수행하고 싶어도 절차대로 수행될때까지
+    기다릴 수 밖에 없다.
+    */
+    document.querySelector("p#p3").addEventListener("mouseover", function (ev) {
+      ev.target.textContent = "반갑습니다";
+      ev.target.style.backgroundColor = "blue";
+      ev.target.style.color = "yellow";
+    });
+    document.querySelector("p#p3").addEventListener("mouseout", function (ev) {
+      ev.target.textContent = "Republic of Korea";
+    });
+  </script>
+</html>
