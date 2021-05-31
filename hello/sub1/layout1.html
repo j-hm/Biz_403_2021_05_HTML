@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내비게이션</title>
+    <style>
+      nav {
+        background-color: aquamarine;
+      }
+      nav li:hover {
+        background-color: lightcoral;
+      }
+      /*
+        ul => li tag를 사용하여 내비구현
+        li tag는 기본 속성이 block형이다
+        li tag는 한 라인에 배치하여 nav로 사용하기 위하여
+        li tag의 속성을 inline-block으로 설정한다
+
+        내부에 a tag가 있을 경우 color를 바탕색과 보색으로 설정
+          */
+      nav ul li {
+        display: inline-block;
+        color: ivory;
+      }
+      /*
+        li tag의 color를 white로 지정했지만
+        a tag는 속성상 별도로 컬러를 지정하지 않으면 청색계열로 표현된다
+        따라서 color는 실제 nav의 바탕색과 보색으로 변경해줄 수 있다
+
+        하지만, nav의 바탕색을 다른 색으로 변경하는 경우도 있기 때문에
+        둘다 컬러를 매번 바꾸는 일은 번거로운 작업
+        nav에서 바탕색과 color를 변경하고 
+        a tag에서 상속받아 색을 지정하는 방식이 유지보수면에서 유리
+        color: inherit로 설정
+
+        nav에 표현되는 각 항복의 폭과 높이를 조절하고자 할 때
+        nav, ul, li tag를 직접변경하지 않고
+        a tag의 padding을 설정하여 만드는 것이 보기 좋다
+
+
+      */
+      nav ul li a {
+        color: inherit; /*컬러 상속받기*/
+        display: inline-block; /*폭과 높이 조절가능*/
+        padding: 5px;
+        text-decoration: none; /*밑줄제거*/
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>내비게이션</h1>
+      <p>UL tag를 사용한 내비게이션 구현</p>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">홈으로</a></li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">자유게시판</a></li>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

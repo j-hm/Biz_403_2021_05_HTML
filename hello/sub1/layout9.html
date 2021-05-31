@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /*
+      웹 브라우저의 화면은
+      width는 보여지는 영역으로 일정한 크기를 갖는다
+      하지만 height는 스크롤 기능이 있어서 일정한 크기로 설정되어 있지 않는다
+      box의 width를 설정하면
+      원하는 폭의 box를 만들 수 있다
+      하지만 height는 %로 지정 할 때 기준이 되는 높이가 정해지지 않아
+      원하는 크기로 만들 수 없다
+      그래서 초기에 html 전체의 높이를 지정해주고
+      그리고 이후에 다른 tag의 높이를 %로 지정할 수 있다
+
+      현재 화면에서 화면을 가득 채우는 layout을 설정하기 위해
+      html의 height를 100%로 설정하였다
+      */
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+      }
+      header {
+        background-color: green;
+        color: honeydew;
+        padding: 2rem;
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
+      }
+      nav {
+        background-color: rgb(109, 34, 0);
+        color: cornsilk;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+      nav li {
+        padding: 12px 16px;
+        cursor: pointer;
+      }
+      nav li:hover {
+        background-color: cornsilk;
+        color: rgb(109, 34, 0);
+      }
+      nav li:first-child:hover {
+        background-color: darkgoldenrod;
+      }
+      section {
+        height: 90%;
+        display: flex;
+      }
+      aside {
+        width: 20%;
+        background-color: cornsilk;
+      }
+      article {
+        width: 60%;
+        overflow: auto;
+      }
+      footer {
+        background-color: black;
+        color: ivory;
+        padding: 0.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MY HOME</h1>
+      <p>마이 홈페이지 방문을 환영합니다</p>
+    </header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>나의 소개</li>
+        <li>방명록</li>
+        <li>로그인</li>
+        <li>dp?</li>
+      </ul>
+    </nav>
+    <section>
+      <aside>왼팔</aside>
+      <article>
+        <p>머리머리머리머리</p>
+        <p>머...........................리</p>
+        <p>머......눈.......눈.....리</p>
+        <p>머..........코.............리</p>
+        <p>머............입...........리</p>
+        <p>머...........................리</p>
+        <p>머리머리머리머리</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+        <p>eogksalsrnrakstp</p>
+      </article>
+      <aside>오른팔</aside>
+    </section>
+    <footer>
+      <address>CopyRight &copy; thinkalonej@gmail.com</address>
+    </footer>
+  </body>
+</html>

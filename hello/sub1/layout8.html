@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      table {
+        border: 2px solid red;
+        border-collapse: collapse;
+        border-spacing: 5px;
+        width: 60%;
+        margin: 0px auto;
+        text-align: center;
+      }
+      th,
+      td {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <colgroup>
+        <col width="15%" />
+        <col width="15%" />
+        <col width="15%" />
+        <col width="55%" />
+      </colgroup>
+      <caption>
+        학생정보
+      </caption>
+      <tr>
+        <th scope="row">학번</th>
+        <th scope="row">이름</th>
+        <th scope="row">주소</th>
+        <th scope="row">전화번호</th>
+      </tr>
+      <tr>
+        <td>001</td>
+        <td>성춘향</td>
+        <td>남원시</td>
+        <td>000-0000-0000</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>이멍령</td>
+        <td>나먼시</td>
+        <td>000-0000-0000</td>
+      </tr>
+    </table>
+    <h3>웹 접근성과 table</h3>
+    <p>table thead 영역에 scope 지정</p>
+  </body>
+</html>

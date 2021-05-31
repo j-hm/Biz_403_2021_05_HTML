@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      div {
+        display: inline-block;
+        width: 25%;
+        border: 1px solid black;
+        margin: 10px;
+      }
+      div#div1 {
+        overflow: hidden;
+      }
+      div#div2 {
+        overflow: scroll;
+      }
+      div#div3 {
+        overflow: auto;
+      }
+      /*
+      img tag에 float 속성을 부여하면
+      이후에 있는 본문이 이미지 주변을 흐르는 것처럼 배치가 된다
+      */
+      div#div4 img {
+        width: 100px;
+        float: left;
+        margin: 10px;
+      }
+      div#div5 img {
+        width: 100px;
+        margin: 10px;
+      }
+      img {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <img src="../2021.jpg" alt="2021 이미지" />
+    </div>
+    <div id="div2">
+      <img src="../2021.jpg" alt="2021 이미지" />
+    </div>
+    <div id="div3">
+      <img src="../2021.jpg" alt="2021 이미지" />
+    </div>
+    <div id="div4">
+      <img src="../2021.jpg" alt="2021 이미지" />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus unde
+        aliquam nostrum ipsum mollitia quis porro praesentium perspiciatis
+        illum. Eaque aperiam totam incidunt eos, veritatis quaerat ut officia
+        harum enim.
+      </p>
+    </div>
+    <div id="div5">
+      <img src="../2021.jpg" alt="2021 이미지" />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus unde
+        aliquam nostrum ipsum mollitia quis porro praesentium perspiciatis
+        illum. Eaque aperiam totam incidunt eos, veritatis quaerat ut officia
+        harum enim.
+      </p>
+    </div>
+  </body>
+</html>
