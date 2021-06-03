@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03</title>
+    <style>
+      section {
+        display: flex;
+        border: 1px solid green;
+        margin: 5px;
+      }
+      section#s1 {
+        /* 
+        flex-item들의 크기가 container보다 커졌을 때 
+        기본값 : nowrap(item들의 크기를 조절하여 한 번에 표시)
+                wrap(item들의 크기를 적절히 조절하다 안되면 줄바꿈)
+        */
+        flex-wrap: wrap;
+        /* direction과 wrap을 한번에 설정하기 */
+        flex-flow: row wrap;
+      }
+      section#s2 {
+        /* 
+        flex-item을 어떻게 배치할래
+        기본값 : row (좌->우)
+                row-reverse (우->좌)
+                column (위->아래)
+                column-reverse (아래->위)
+         */
+        flex-direction: column;
+      }
+      article {
+        /*
+        flex
+        */
+        flex: 100px;
+        border: 1px solid orange;
+        margin: 5px;
+        text-align: center;
+      }
+      section#s1 article {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="s1">
+      <article>가</article>
+      <article>나</article>
+      <article>다</article>
+      <article>라</article>
+      <article>마</article>
+    </section>
+    <section id="s2">
+      <article>A</article>
+      <article>B</article>
+      <article>C</article>
+      <article>D</article>
+      <article>E</article>
+    </section>
+  </body>
+</html>
