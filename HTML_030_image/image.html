@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 다루기</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid skyblue;
+      }
+      div.img1 img {
+        width: 50%;
+      }
+      div.img2 img {
+        width: 50%;
+        /*
+        img에 float 적용하기
+        */
+        float: left;
+        margin: 5px;
+      }
+      div.img4 img {
+        /*
+          img를 box만큼만 보여주고 나머지 자르기
+          */
+        overflow: hidden;
+      }
+      div.img5 img {
+        /*
+          img를 box만큼만 보여주고 나머지 자르기
+          */
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>HTML에서 이미지 다루기</h2>
+    <p>img tag를 사용하여 이미지 표현</p>
+
+    <div class="img1">
+      <img src="images (3).jpg" width="100%" />
+      <p>img tag에 이미지 소스(src)를 지정하고 width를 지정하는 방법</p>
+    </div>
+
+    <div class="img2">
+      <img src="images (1).jpg" alt="image2" />
+      <p>img tag에 이미지 소스(src)를 지정하고 alt를 지정하는 방법</p>
+    </div>
+
+    <div class="img3">
+      <img src="images (4).jpg" alt="image2" width="100%" height="50%" />
+      <p>img tag에 이미지 소스(src)를 지정하고 width와 height 지정하는 방법</p>
+    </div>
+
+    <div class="img4">
+      <img src="images (2).jpg" alt="image2" />
+      <p>img tag에 이미지 소스(src)를 지정하고 효과주기</p>
+    </div>
+
+    <div class="img5">
+      <img src="images (6).jpg" alt="image2" />
+      <p>img tag에 이미지 소스(src)를 지정하고 효과주기</p>
+    </div>
+    <p>background를 사용하여 이미지 표현</p>
+  </body>
+</html>

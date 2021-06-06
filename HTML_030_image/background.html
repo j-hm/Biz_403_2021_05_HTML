@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      div.container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      div.container div {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        border: 1px solid skyblue;
+        color: ivory;
+        font-size: 40px;
+        transition: 1s; /* hover시 딜레이 수행하는 속성 */
+      }
+      div.b1 {
+        background-image: url("images (2).jpg");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div.b1 img {
+        border-radius: 50%;
+      }
+      div.b2 {
+        /* 이미지크기에 상관없이 박스 영역만큼 보여주기 */
+        background-image: url("images (2).jpg");
+        /* width height */
+        background-size: 100% 100%;
+      }
+      div.b3 {
+        background-image: url("images (2).jpg");
+        background-size: 50% 100%;
+      }
+      div.b4 {
+        background-image: url("images (2).jpg");
+        background-size: 100% 50%;
+      }
+      div.b5 {
+        background-image: url("images (2).jpg");
+        background-repeat: no-repeat; /* 하나만 표시하고 비워두기 */
+        background-size: 50% 50%;
+      }
+      div.b6 {
+        background-image: url("images (2).jpg");
+        background-repeat: no-repeat; /* 하나만 표시하고 비워두기 */
+        background-size: 50% 50%;
+        background-position: 50% 50%; /* = x(50), y(50) */
+      }
+      div.b7 {
+        background-image: url("images (2).jpg");
+        background-repeat: no-repeat; /* 하나만 표시하고 비워두기 */
+        background-size: 50% 50%;
+        background-position: 0% 100%;
+      }
+      /*
+      background-img의 width를 20%로 설정하고
+      hover가 되면 100%로 변경하도록 설정
+
+      그리고 transition값을 부여하면
+      움직이는 애니메이션 효과를 줄수있다
+      */
+      div.b8 {
+        background-image: url("images (2).jpg");
+        background-repeat: no-repeat; /* 하나만 표시하고 비워두기 */
+        background-size: 20% 100%;
+        background-position: center;
+      }
+      div.b8:hover {
+        background-size: 100% 100%;
+      }
+      div.b9 {
+        background-image: url("images (2).jpg");
+        background-repeat: no-repeat; /* 하나만 표시하고 비워두기 */
+        background-size: 100% 100%;
+        background-position: center;
+      }
+      div.b9:hover {
+        background-size: 50% 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="b1">
+        <img src="images (6).jpg" width="50%" height="100%" />
+      </div>
+      <div class="b2">와! 바다다!</div>
+      <div class="b3">바바<br />다다</div>
+      <div class="b4">바다<br />바다</div>
+      <div class="b5"></div>
+      <div class="b6"></div>
+      <div class="b7"></div>
+      <div class="b8"></div>
+      <div class="b9"></div>
+    </div>
+  </body>
+</html>
