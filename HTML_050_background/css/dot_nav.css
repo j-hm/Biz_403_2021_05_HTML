@@ -1,0 +1,21 @@
+nav#dot_nav {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+}
+nav#dot_nav li {
+  width: 17px;
+  height: 17px;
+  /* relative 속성은 기본적으로 아무런 효과가 없는 설정이다
+  단, 이 박스가 포함하고 있는 내부박스들에 absolute를 사용하기 위해 지정한다 */
+  position: relative;
+  margin: 16px 7px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+nav#dot_nav li span {
+  color: white;
+  opacity: 0;
+  /* relative로 설정된 박스에 대하여 절대 위치 */
+  position: absolute;
+}
