@@ -49,9 +49,3 @@ article#art5 {
 article#art6 {
   background: url("../image/images (6).jpg") no-repeat;
 }
-@media screen and (max-width: 1000px) {
-  section#contents {
-    font-size: 40px;
-    font-weight: 500;
-  }
-}

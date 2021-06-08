@@ -5,6 +5,14 @@ nav#main_nav {
   display: flex; /* 메뉴 오른쪽으로 이동 */
   width: 100%;
 }
+nav#main_nav h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+}
+nav#main_nav div {
+  margin-left: auto;
+}
 nav#main_nav ul {
   /* container를 flex로 하고 child의
     margin-left:auto로 설정하면
@@ -25,8 +33,15 @@ nav#main_nav li.active {
 nav#main_nav li:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
-nav#main_nav h1 {
+nav#main_nav div.menu_toggle {
+  width: 100%;
+  padding: 22px;
+  text-align: right;
   color: white;
-  font-size: 40px;
-  font-weight: 900;
+  font-size: 20px;
+  display: none;
+}
+nav#main_nav ul.drop {
+  visibility: visible;
+  height: 50vh;
 }
