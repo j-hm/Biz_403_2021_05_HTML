@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dynamic HTML</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 10px auto;
+      }
+      table th,
+      td {
+        border: 1px solid tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>이름</th>
+        <th>전화번호</th>
+        <th>주소</th>
+      </tr>
+      <tr>
+        <td>홈길동</td>
+        <td>010-0000-0000</td>
+        <td>서울</td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    let body = document.querySelector("body");
+
+    let table = document.createElement("table");
+    let row = document.createElement("tr");
+
+    let cell1 = document.createElement("th");
+    cell1.innerHTML = "이름";
+
+    let cell2 = document.createElement("th");
+    cell2.innerHTML = "전화번호";
+
+    let cell3 = document.createElement("th");
+    cell3.innerHTML = "주소";
+
+    row.appendChild(cell1);
+    row.appendChild(cell2);
+    row.appendChild(cell3);
+
+    table.appendChild(row);
+
+    let row2 = document.createElement("tr");
+
+    let cell4 = document.createElement("td");
+    cell4.innerHTML = "짱";
+
+    let cell5 = document.createElement("td");
+    cell5.innerHTML = "011-111-1111";
+
+    let cell6 = document.createElement("td");
+    cell6.innerHTML = "집에보내주세요..";
+
+    row2.appendChild(cell4);
+    row2.appendChild(cell5);
+    row2.appendChild(cell6);
+
+    table.appendChild(row2);
+    body.appendChild(table);
+
+    //js배열을 이용하여
+
+    const titles = ["이름", "전화번호", "주소"];
+    const data = ["홍", "011", "LA"];
+
+    let table1 = document.createElement("table");
+    let tr = document.createElement("tr");
+    for (let i = 0; i < titles.length; i++) {
+      let td = document.createElement("td");
+      td.innerHTML = titles[i];
+      tr.appendChild(td);
+    }
+    table1.appendChild(tr);
+    document.querySelector("body").appendChild(table1);
+  </script>
+</html>

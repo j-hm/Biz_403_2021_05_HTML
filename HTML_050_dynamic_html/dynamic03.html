@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 80%;
+        margin: 10px auto;
+        text-align: center;
+      }
+      table td {
+        border: 2px solid tomato;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    //2차원 배열 [][]
+    const datas = [
+      ["이름", "전화번호", "주소"],
+      ["홍길동", "011", "서울"],
+      ["성춘향", "022", "익산"],
+      ["이몽룡", "033", "남원"],
+    ];
+
+    let table = document.createElement("table");
+    for (let i = 0; i < datas.length; i++) {
+      let tr = document.createElement("tr");
+      for (let j = 0; j < datas[i].length; j++) {
+        let td = document.createElement("td");
+        td.innerHTML = datas[i][j];
+        tr.appendChild(td);
+      }
+      table.appendChild(tr);
+    }
+    document.querySelector("body").appendChild(table);
+  </script>
+</html>
