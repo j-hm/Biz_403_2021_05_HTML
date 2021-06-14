@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      section {
+        width: 500px;
+        margin: 30px auto;
+        position: relative;
+      }
+      div.mask {
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+      }
+      div.images img {
+        width: 500px;
+        height: 500px;
+      }
+      article.nav {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%); /* 이미지 중앙에 화살표 위치 지정 */
+        font-size: 30px;
+        display: flex;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      article.nav div:last-child {
+        margin-left: auto;
+      }
+      article.nav:hover {
+        opacity: 1;
+      }
+      article.nav div:hover {
+        text-shadow: 4px 4px 4px lime;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const IMAGE_WIDTH = 500;
+        const images = document.querySelector("div.images");
+        let position = IMAGE_WIDTH;
+        const prev = () => {
+          position += IMAGE_WIDTH * -1;
+          images.style.transform = `translateX(${position})`;
+        };
+        document.querySelector("article.nav").addEventListener("click", (e) => {
+          let tag = e.target;
+          if (tag.tagName === "DIV") {
+            if (tag.innerText === "◀") {
+              //alert("앞으로");
+              prev();
+            } else if (tag.innerText === "▶") {
+              alert("뒤로");
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section>
+      <div class="mask">
+        <div class="images">
+          <img src="images (1).jpg" />
+          <img src="images (2).jpg" />
+          <img src="images (3).jpg" />
+          <img src="images (4).jpg" />
+          <img src="images (5).jpg" />
+        </div>
+      </div>
+      <article class="nav">
+        <div>◀</div>
+        <div>▶</div>
+      </article>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      div.main {
+        width: 500px;
+        padding: 10px;
+        margin: 50px auto;
+        border: 2px solid navy;
+      }
+      div.main div {
+        width: 80%;
+        margin: 5px;
+        padding: 3rem;
+        border: 2px solid orange;
+      }
+      /*
+        position: fixed;로 설정하면
+        뷰 포트 내에서 절대값 좌표를 지정하여 위치를 지정할 수 있다
+      */
+      div.main div:nth-of-type(1) {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+      }
+      /*
+        모든 block형 tag는 감춰진 position속성이 있는데
+        기본값이 모두 relative이다
+        block형 tag를 나열하면 순서에 따라 위에서 아래로 배치가 된다
+      */
+      div.main {
+        position: relative;
+      }
+      /*
+        block(div.main)이
+        block(div.main div)을 감싸고 있을 때
+        내부 block(child block : div.main div)을
+        외부 block(parents block : div.main)에 대하여
+        외부블럭 범위내에서 절대적인 위치를 저장하고자 할 때
+        position: absolute;를 사용한다
+
+        내부블럭에서 position: absolute;를 사용할 때
+        parents block에 position이 없으면
+        absolute되는 기준이 body가 되거나
+        또는 parents를 감싸고 있는 다른 상위 block에
+        position이 지정되어 있으면 그 block을 기준으로 배치된다
+
+        나를 감싸고 있는 parents block에 대하여
+        absolute를 설정하고 싶으면
+        position: relative;를 선언해야한다
+        그러면 chlid block에서 position: absolute;을 사용가능
+      */
+      div.main div:nth-of-type(2) {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div>div1</div>
+      <div>div2</div>
+      <div>div3</div>
+    </div>
+  </body>
+</html>
