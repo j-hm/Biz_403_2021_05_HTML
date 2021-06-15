@@ -16,6 +16,9 @@
         height: 500px;
         overflow: hidden;
       }
+      div.images {
+        display: flex;
+      }
       div.images img {
         width: 500px;
         height: 500px;
@@ -46,22 +49,21 @@
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        const image = document.querySelector("div.images");
         const IMAGE_WIDTH = 500;
-        const images = document.querySelector("div.images");
-        let position = IMAGE_WIDTH;
+        let position = 0;
         const prev = () => {
+          // 이미지(mask_box)의 width만큼 position값을 감소시킴
           position += IMAGE_WIDTH * -1;
-          images.style.transform = `translateX(${position})`;
-        };
+          // image.style.marginLeft = position + "px";
+          // image.style.transform = "translateX(" + position + "px)";
+          // js에서는 문자열 + 문자열 ...등의 연산 대신에 backtick
+          image.style.transform = `transformX(${position}px)`;
+        }; // end prev
         document.querySelector("article.nav").addEventListener("click", (e) => {
-          let tag = e.target;
-          if (tag.tagName === "DIV") {
-            if (tag.innerText === "◀") {
-              //alert("앞으로");
-              prev();
-            } else if (tag.innerText === "▶") {
-              alert("뒤로");
-            }
+          let text = e.target.innerHTML;
+          if (text === "<" || text === "&lt;") {
+            prev();
           }
         });
       });
@@ -79,8 +81,8 @@
         </div>
       </div>
       <article class="nav">
-        <div>◀</div>
-        <div>▶</div>
+        <div>&lt;</div>
+        <div>&gt;</div>
       </article>
     </section>
   </body>
